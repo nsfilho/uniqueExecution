@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/nsfilho/uniqueExecution/compare/v0.1.6...v0.1.7) (2020-08-30)
+
+
+### Bug Fixes
+
+* **project:** solved problems on github actions to release package ([3e6d2f6](https://github.com/nsfilho/uniqueExecution/commit/3e6d2f622b458292657ab13a44070d76a98134aa))
+
 ### [0.1.6](https://github.com/nsfilho/uniqueExecution/compare/v0.1.5...v0.1.6) (2020-08-30)
 
 
