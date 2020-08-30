@@ -3,6 +3,7 @@
     "main": "build/index.js",
     "type": "build/index.d.ts",
     "license": "GPL-3.0",
+    "private": false,
     "dependencies": {
         "moment": "^2.27.0",
         "nanoid": "^3.1.12"
@@ -18,6 +19,7 @@
         "@typescript-eslint/eslint-plugin": "^3.10.1",
         "@typescript-eslint/parser": "^3.10.1",
         "commitizen": "^4.2.1",
+        "cz-conventional-changelog": "3.3.0",
         "eslint": "^7.7.0",
         "eslint-config-airbnb": "^18.2.0",
         "eslint-config-prettier": "^6.11.0",
@@ -39,7 +41,8 @@
         "build": "tsc",
         "docs": "typedoc",
         "test": "jest --detectOpenHandles",
-        "jest": "yarn test"
+        "jest": "yarn test",
+        "release": "standard-version"
     },
     "husky": {
         "hooks": {
@@ -55,5 +58,10 @@
             "prettier --write"
         ]
     },
-    "version": "0.0.0"
+    "version": "0.1.0",
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
 }
