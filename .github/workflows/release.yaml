@@ -61,8 +61,8 @@ jobs:
                   publish_dir: ./docs
             - name: Archiving files
               run: |
-                  tar --exclude='.git' --exclude 'node_modules' --exclude='*.tar.gz' -czvf source.tar.gz .
-                  tar --exclude='.git' --exclude 'node_modules' --exclude='*.tar.gz' -czvf docs.tar.gz ./docs
+                  tar --exclude='.git' --exclude 'node_modules' --exclude='*.tar.gz' -czvf source.tar.gz . ; exit  0
+                  tar --exclude='.git' --exclude 'node_modules' --exclude='*.tar.gz' -czvf docs.tar.gz ./docs ; exit 0
             - name: Upload source.tar.gz
               uses: actions/upload-release-asset@v1
               env:
