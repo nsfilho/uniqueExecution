@@ -12,6 +12,13 @@
         "name": "Nelio Souza Santos Filho",
         "email": "nsfilho@icloud.com"
     },
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nsfilho/uniqueExecution"
+    },
     "devDependencies": {
         "@commitlint/cli": "^9.1.2",
         "@commitlint/config-conventional": "^9.1.2",
