@@ -59,25 +59,25 @@ jobs:
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./docs
-            - name: Archive version
+            - name: Archiving files
               run: |
-                  zip --junk-paths source .
-                  zip --junk-paths docs ./docs
-            - name: Upload source.zip
+                  tar --exclude='*.tar.gz' -czvf source.tar.gz .
+                  tar --exclude='*.tar.gz' -czvf docs.tar.gz ./docs
+            - name: Upload source.tar.gz
               uses: actions/upload-release-asset@v1
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: source.zip
-                  asset_name: source.zip
+                  asset_path: source.tar.gz
+                  asset_name: source.tar.gz
                   asset_content_type: application/octet-stream
-            - name: Upload docs.zip
+            - name: Upload docs.tar.gz
               uses: actions/upload-release-asset@v1
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: docs.zip
-                  asset_name: docs.zip
+                  asset_path: docs.tar.gz
+                  asset_name: docs.tar.gz
                   asset_content_type: application/octet-stream
