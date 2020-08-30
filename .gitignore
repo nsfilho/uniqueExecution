@@ -4,6 +4,7 @@
 
 ### macOS ###
 # General
+docs
 .DS_Store
 .AppleDouble
 .LSOverride
