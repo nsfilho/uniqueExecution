@@ -61,17 +61,7 @@ jobs:
                   publish_dir: ./docs
             - name: Archiving files
               run: |
-                  tar --exclude='.git' --exclude 'node_modules' --exclude='*.tar.gz' -czvf /tmp/source.tar.gz .
                   tar --exclude='.git' --exclude 'node_modules' --exclude='*.tar.gz' -czvf /tmp/docs.tar.gz ./docs
-            - name: Upload source.tar.gz
-              uses: actions/upload-release-asset@v1
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: /tmp/source.tar.gz
-                  asset_name: source.tar.gz
-                  asset_content_type: application/octet-stream
             - name: Upload docs.tar.gz
               uses: actions/upload-release-asset@v1
               env:
