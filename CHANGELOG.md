@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/nsfilho/uniqueExecution/compare/v0.1.2...v0.1.3) (2020-08-30)
+
+
+### Features
+
+* **docs:** removing docs from source ([09c9bab](https://github.com/nsfilho/uniqueExecution/commit/09c9bab1baa49679fc84daadea548e04838fc971))
+
+
+### Bug Fixes
+
+* **project:** release routine in github actions ([0aa6357](https://github.com/nsfilho/uniqueExecution/commit/0aa63576cffcf9de8e9c41e8338eb6b4911a00d6))
+
 ### 0.1.2 (2020-08-30)
 
 
