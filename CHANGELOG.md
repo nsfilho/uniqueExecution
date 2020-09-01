@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/nsfilho/uniqueExecution/compare/v0.1.7...v0.1.8) (2020-09-01)
+
+
+### Features
+
+* **libs:** changing deps from moment to day.js ([1d1de02](https://github.com/nsfilho/uniqueExecution/commit/1d1de02bb34d455551714c9a2b91aa96e188eece))
+
 ### [0.1.7](https://github.com/nsfilho/uniqueExecution/compare/v0.1.6...v0.1.7) (2020-08-30)
 
 
