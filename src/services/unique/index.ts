@@ -18,8 +18,8 @@
  * Author: Nelio Santos <nsfilho@icloud.com>
  * 
  */
+import dayjs from 'dayjs';
 import { nanoid } from 'nanoid';
-import moment from 'moment';
 import { UNIQUE_START_DELAY, UNIQUE_POOLING } from '../../constants';
 
 /**
@@ -45,9 +45,9 @@ interface ExecutionManager extends ExecutionOptions {
     /** executed (yes or no) */
     done: boolean;
     /** When created */
-    createdAt: moment.Moment;
+    createdAt: dayjs.Dayjs;
     /** When executed  */
-    whenExecuted?: moment.Moment;
+    whenExecuted?: dayjs.Dayjs;
     /** Callback async function */
     func: UniqueExecutionCallback;
     /** Execution failed, because result a throw */
@@ -97,7 +97,7 @@ async function runTasks() {
     stopManager();
     const nextTask = manager.queue
         .filter((v) => !v.done)
-        .filter((v) => moment().diff(v.createdAt) > v.delay)
+        .filter((v) => dayjs().diff(v.createdAt, 'ms') > v.delay)
         .sort((a, b) => a.priority - b.priority);
     for (let x = 0; x < nextTask.length; x += 1) {
         const task = nextTask[x];
@@ -113,7 +113,7 @@ async function runTasks() {
             }
         }
         task.done = true;
-        task.whenExecuted = moment();
+        task.whenExecuted = dayjs();
     }
     if (!isAllDone()) startManager();
 }
@@ -150,7 +150,7 @@ export const uniqueExecution = (options: uniqueExecutionOptions): void => {
                 status: false,
                 func: onFailCallback,
             },
-            createdAt: moment(),
+            createdAt: dayjs(),
             func: callback,
             ...resultOptions,
         });

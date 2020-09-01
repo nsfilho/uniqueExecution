@@ -71,8 +71,8 @@ exports.uniqueQueue = exports.uniqueExecution = exports.startManager = exports.s
  * Author: Nelio Santos <nsfilho@icloud.com>
  *
  */
+var dayjs_1 = __importDefault(require("dayjs"));
 var nanoid_1 = require("nanoid");
-var moment_1 = __importDefault(require("moment"));
 var constants_1 = require("../../constants");
 var manager = {
     queue: [],
@@ -107,7 +107,7 @@ function runTasks() {
                     exports.stopManager();
                     nextTask = manager.queue
                         .filter(function (v) { return !v.done; })
-                        .filter(function (v) { return moment_1.default().diff(v.createdAt) > v.delay; })
+                        .filter(function (v) { return dayjs_1.default().diff(v.createdAt, 'ms') > v.delay; })
                         .sort(function (a, b) { return a.priority - b.priority; });
                     x = 0;
                     _a.label = 1;
@@ -137,7 +137,7 @@ function runTasks() {
                 case 6: return [3 /*break*/, 7];
                 case 7:
                     task.done = true;
-                    task.whenExecuted = moment_1.default();
+                    task.whenExecuted = dayjs_1.default();
                     _a.label = 8;
                 case 8:
                     x += 1;
@@ -162,7 +162,7 @@ exports.uniqueExecution = function (options) {
         manager.queue.push(__assign({ name: name, done: false, failed: {
                 status: false,
                 func: onFailCallback,
-            }, createdAt: moment_1.default(), func: callback }, resultOptions));
+            }, createdAt: dayjs_1.default(), func: callback }, resultOptions));
         exports.startManager();
     }
 };
