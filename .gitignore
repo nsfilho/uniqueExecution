@@ -4,6 +4,7 @@
 
 ### macOS ###
 # General
+build
 docs
 .DS_Store
 .AppleDouble
