@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/nsfilho/uniqueExecution/compare/v0.1.8...v0.1.9) (2020-09-06)
+
+
+### Bug Fixes
+
+* **docs:** better documentation pattern ([c19b805](https://github.com/nsfilho/uniqueExecution/commit/c19b80550a9c75f0304f50b211bee025cd2ec853))
+* **docs:** fixing some headers ([e5a6cee](https://github.com/nsfilho/uniqueExecution/commit/e5a6cee02f66d1a47f9596ceba669b555582737d))
+
 ### [0.1.8](https://github.com/nsfilho/uniqueExecution/compare/v0.1.7...v0.1.8) (2020-09-01)
 
 
