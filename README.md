@@ -3,7 +3,9 @@
 A very simple and small services to guarantee a `Unique Execution` of some piece of code (async) in
 a javascript / typescript applications.
 
-Project licensed under: GPLv3
+-   Project licensed under: GPLv3
+-   Site Documentation: [Homepage](https://nsfilho.github.io/uniqueExecution/index.html)
+-   Repository: [GitHub](https://github.com/nsfilho/uniqueExecution.git)
 
 ## Environment Variables
 

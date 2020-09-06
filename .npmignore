@@ -1,6 +1,8 @@
 src
 docs
+.vscode
 .github
+CHANGELOG.md
 .eslintrc.js
 .prettierrc.js
 commitlint.config.js
