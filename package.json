@@ -1,7 +1,7 @@
 {
     "name": "@nsfilho/unique",
     "main": "build/index.js",
-    "type": "build/index.d.ts",
+    "types": "build/index.d.ts",
     "license": "GPL-3.0",
     "private": false,
     "dependencies": {
@@ -69,7 +69,7 @@
             "prettier --write"
         ]
     },
-    "version": "0.1.9",
+    "version": "0.1.11",
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
