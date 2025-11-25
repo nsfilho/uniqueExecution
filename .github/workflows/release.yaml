@@ -9,7 +9,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
             # Prepare repository
             - name: Setup node
               uses: actions/setup-node@v2-beta
@@ -19,7 +19,7 @@ jobs:
             - name: Setup Yarn Cache
               run: yarn config set yarn-offline-mirror ~/.yarn-offline
             - name: Cache node modules
-              uses: actions/cache@v2
+              uses: actions/cache@v4
               env:
                   cache-name: cache-node-modules
               with:
